@@ -457,7 +457,7 @@ h3 {
 .form-checkbox:checked
 + .checkbox-label
 > .my-form-checkbox {
-    outline: none;
+    outline: 0px solid transparent;
 
 }
 
