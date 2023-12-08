@@ -72,7 +72,7 @@
 
       <section class="advantages-section">
         <div class="container">
-          <h2 class="advantages-header">Advantages</h2>
+          <h2 class="visually-hidden">Advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-item">
               <div class="advantages-icon-box">
@@ -691,15 +691,20 @@
           <div class="checkbox-container">
             <input
               type="checkbox"
-              class="form-checkbox"
+              class="form-checkbox visually-hidden"
               name="privacy"
               id="privacy"
               value="true"
               required
             />
-            <label for="privacy" class="contacts-label"
-              >I accept the terms and conditions of the
-              <a href="">Privacy Policy</a></label
+            <label for="privacy" class="checkbox-label">
+              <span class="my-form-checkbox">
+                <svg class="checked-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-checkboxclick"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="privacy-link">Privacy Policy</a></label
             >
           </div>
           <div class="sub-btn-container">
