@@ -429,8 +429,9 @@ h3 {
 }
 
 .checked-icon{
-    background-color: none;
     opacity: 0;
+    fill: #F4F4FD;
+    stroke: #F4F4FD;
 }
 
 .form-checkbox:checked
