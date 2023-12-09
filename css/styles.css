@@ -916,6 +916,10 @@ h3 {
     border-radius: 4px;
     padding-left: 16px;
     color: #FFF;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
     
 }
 
@@ -935,17 +939,24 @@ h3 {
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     border-radius: 4px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4D5AE5;
     border: none;
     color:#FFFFFF;
     cursor: pointer;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
 }
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
     background-color: #404BBF;
+}
+
+.subscribe-icon{
+    margin-left: 16px;
 }
