@@ -903,7 +903,7 @@ h3 {
 }
 
 .footer-form-content{
-    display: inline-flex;
+    display: flex;
     gap: 24px;
 }
 
