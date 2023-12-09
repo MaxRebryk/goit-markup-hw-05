@@ -287,6 +287,7 @@ h3 {
     visibility: visible;
     transition: opacity 250ms linear;
     transition: visibility 250ms linear;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal{
@@ -297,24 +298,26 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 80px;
+   
     border-radius: 4px;
-    padding: 24px;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 24px;
     right: 24px;
     padding: 0;
     border: 1px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50px;
-    border-color: rgba(0, 0, 0, 0.10);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     background-color: #E7E9FC;
     line-height: 0;
@@ -322,7 +325,7 @@ h3 {
     stroke: #2E2F42;
     transition: stroke 250ms linear;
     transition: fill 250ms linear;
-    transition: background-color 250ms linear;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -331,6 +334,10 @@ h3 {
     background-color: #404BBF;
     stroke: #FFFFFF;
     fill: #FFFFFF;
+}
+
+.close-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -350,9 +357,10 @@ h3 {
 .contacts-label{
     font-size: 12px;
     font-weight: 400;
-    line-height:  1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8E8F99;
+    margin-bottom: 4px;
 }
 
 .form-comment::placeholder{
@@ -370,8 +378,9 @@ h3 {
     border: solid 1px rgba(46, 47, 66, 0.40);
     margin-bottom: 8px;
     padding-left: 38px;
-    transition: border-color 250ms linear;
     outline: 0px solid transparent;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -389,18 +398,20 @@ h3 {
 .form-comment{
     width: 100%;
     height: 120px;
-    padding-left: 16px;
-    padding-top: 8px;
+    padding: 8px 16px;
     border: solid 1px rgba(46, 47, 66, 0.40);
-    transition: border-color 250ms linear;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: 0px solid transparent;
     resize: none;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color:rgba(46, 47, 66, 0.40);
     margin-bottom: 16px;
+    border-radius: 4px;
+    background-color: transparent;
+
 }
 
 .form-comment:focus{
@@ -408,10 +419,11 @@ h3 {
 }
 
 .input-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.input-texarea-container{
+    margin-bottom: 16px
 }
 
 .checkbox-container{
@@ -428,6 +440,7 @@ h3 {
     background-color: none;
     cursor: pointer;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -440,8 +453,9 @@ h3 {
 .form-checkbox:checked
  + .checkbox-label
  > .my-form-checkbox{
+    fill: #F4F4FD;
     background-color: #404BBF;
-    border-color: #404BBF;
+    border: none;
     
 
 }
@@ -462,6 +476,7 @@ h3 {
 + .checkbox-label
 > .my-form-checkbox {
     outline: 0px solid transparent;
+    border: none;
 
 }
 
@@ -470,7 +485,7 @@ h3 {
     height: 16px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8E8F99;
     align-items: flex-end;
@@ -494,25 +509,22 @@ h3 {
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: #4D5AE5;
-    color: #FFF;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;  
     letter-spacing: 0.04em;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sub-btn:hover , .sub-btn:focus{
     background-color: #404BBF;
 }
 
-.sub-btn-container{
-    width: 169px;
-    height: 56px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 .input-icon-container {
     position: relative;
     width: 100%;
@@ -520,7 +532,7 @@ h3 {
 
 .input-icons{
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 16px;
     transform: translateY(-50%);
 }
