@@ -492,9 +492,7 @@ h3 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: #4D5AE5;
     color: #FFF;
-    font-family: Roboto;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5;  
     letter-spacing: 0.04em;
@@ -887,4 +885,67 @@ h3 {
     fill: #f4f4fd;
 
 
+}
+
+.footer-form-container{
+    margin-left: 80px;
+}
+
+.footer-form-header{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.footer-form-content{
+    display: inline-flex;
+    gap: 24px;
+}
+
+.footer-email-input{
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding-left: 16px;
+    color: #FFF;
+    
+}
+
+.footer-email-input::placeholder{
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+}
+
+.subscribe-btn{
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    width: 165px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border: none;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: #404BBF;
 }
